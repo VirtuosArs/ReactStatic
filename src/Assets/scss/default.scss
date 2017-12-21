@@ -1,0 +1,77 @@
+@import "variables.scss";
+@import "mixins.scss";
+@import "global.scss";
+@import "bootstrap-overrides.scss";
+body {
+    background: $primary;
+}
+
+header {
+    navbar {
+        background-color: gray-500;
+    }
+}
+
+// Styling for the masthead
+header.masthead {
+    padding-top: 10rem;
+    padding-bottom: calc(10rem - 56px);
+    background-image: url('../img/header.jpg');
+    background-position: center center;
+    box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
+    @include background-cover;
+    hr {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    p {
+        font-weight: 300;
+    }
+    @media (min-width: 768px) {
+        p {
+            font-size: 1.15rem;
+        }
+    }
+    @media (min-width: 992px) {
+        height: 100vh;
+        min-height: 650px;
+        padding-top: 0;
+        padding-bottom: 0;
+        h1 {
+            font-size: 3rem;
+        }
+    }
+    @media (min-width: 1200px) {
+        h1 {
+            font-size: 4rem;
+        }
+    }
+}
+
+.detail {
+    font-size: 2rem;
+    color: $gray-200;
+}
+
+footer {
+    text-align: center;
+    color: $gray-200;
+    a {
+        color: $gray-500;
+        &:hover {
+            color: $gray-200;
+            text-decoration: none;
+        }
+    }
+    
+    hr {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        border-color: $gray-200;
+        border-width: 2px;
+        max-width: 100%;
+    }
+}
